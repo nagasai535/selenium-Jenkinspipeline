@@ -6,6 +6,17 @@ public class Selenium {
 
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","comtest/lib/chromedriver.exe"); // <-- Change this path
+	    
+	    options.addArguments("--disable-web-security");
+options.addArguments("--ignore-urlfetcher-cert-requests");
+options.addArguments("--disable-renderer-backgrounding");
+options.addArguments("--disable-infobars");
+options.addArguments("--start-maximized");
+options.addArguments("--no-sandbox");
+if (isHeadless) {
+    options.addArguments("--headless");
+}
+	    
         WebDriver driver = new ChromeDriver();
         String baseUrl = "https://google.com";
         String expectedTitle = "Google";
