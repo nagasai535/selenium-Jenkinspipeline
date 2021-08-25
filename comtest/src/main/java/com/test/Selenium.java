@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Selenium {
 
     public static void main(String[] args) {
+	    ChromeOptions options = new ChromeOptions();
+	    
         System.setProperty("webdriver.chrome.driver","comtest/lib/chromedriver.exe"); // <-- Change this path
 	    
 	    options.addArguments("--disable-web-security");
@@ -16,8 +18,8 @@ options.addArguments("--no-sandbox");
 if (isHeadless) {
     options.addArguments("--headless");
 }
-	    
-        WebDriver driver = new ChromeDriver();
+	    webDriver = new ChromeDriver(options);
+       // WebDriver driver = new ChromeDriver();
         String baseUrl = "https://google.com";
         String expectedTitle = "Google";
         String actualTitle = "";
