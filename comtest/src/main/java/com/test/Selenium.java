@@ -18,8 +18,8 @@ options.addArguments("--no-sandbox");
 if (isHeadless) {
     options.addArguments("--headless");
 }
-	    webDriver = new ChromeDriver(options);
-       // WebDriver driver = new ChromeDriver();
+	   // webDriver = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver(options);
         String baseUrl = "https://google.com";
         String expectedTitle = "Google";
         String actualTitle = "";
