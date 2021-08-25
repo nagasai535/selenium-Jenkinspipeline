@@ -7,7 +7,7 @@ public class Selenium {
     public static void main(String[] args) {
 	    ChromeOptions options = new ChromeOptions();
 	    
-        System.setProperty("webdriver.chrome.driver","comtest/lib/chromedriver.exe"); // <-- Change this path
+        System.setProperty("webdriver.chrome.driver","comtest/lib/chromedriver"); // <-- Change this path
 	    
 	    options.addArguments("--disable-web-security");
 options.addArguments("--ignore-urlfetcher-cert-requests");
